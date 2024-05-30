@@ -7,12 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container"><h1 style="text-align: center;">User Input Form</h1>
         
             <form>
-                <button type="button" onclick="handleClick()" class="question">What is the occasion for this jewellery?</button> :
+              <div class="mt-3">
+                  <button type="button" onclick="handleClick()" class="question">What is the occasion for this jewellery?</button> :
                 <select id="occasion" name="occasion" required class="ms-4">
                     <option value="">Select an option</option>
                     <option value="Engagement">Engagement</option>
@@ -24,9 +26,156 @@
                 <input type="text" id="customOccasion" name="customOccasion" class="form-control mt-2" placeholder="Enter custom occasion" style="display:none;">            <div class="note">
                 <p id="message" style="display: none;" class="note">Note: This helps us tailor our recommendations to match the significance and style suitable for the event.</p>
                
-            </div>
-           
-        </form>
+              </div>
+                <div class="mt-3">
+                    <button type="button" onclick="handleClick2()"  class="question">Is this a gift or a personal purchase?</button> :
+                <select id="occasion" name="occasion" required class="ms-4">
+                    <option value="">Select an option</option>
+                    <option value="Gift">Gift</option>
+                    <option value="Personal Purchase">Personal Purchase</option>
+                </select>
+                <input type="text" id="customOccasion" name="customOccasion" class="form-control mt-2" placeholder="Enter custom occasion" style="display:none;">           
+                <div class="note">
+                <p id="message2" style="display: none;"> Understanding if the jewellery is for yourself or someone else helps us refine our suggestions based on typical gift preferences.</p>
+               
+                </div>
+
+                <div class="mt-3">
+                    <button type="button" onclick="handleClick3()" class="question">What is the occasion for this jewellery?</button> :
+                  <select id="occasion" name="occasion" required class="ms-4">
+                      <option value="">Select an option</option>
+                      <option value="Male">Male<i class="fa-solid fa-person"></i></option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                      
+                  </select>
+                  <input type="text" id="customOccasion" name="customOccasion" class="form-control mt-2" placeholder="Enter custom occasion" style="display:none;">            
+                  <div class="note">
+                  <p id="message3" style="display: none;" class="note">This allows us to recommend designs and styles that align with the typical preferences of the chosen gender.</p>
+                 
+                </div>
+                <div class="age-group-container mt-3">
+                    <button type="button" onclick="handleClick4()" class="question">What is the age group of the wearer?</button> :
+                    <label class="age-group">
+                      <input type="radio" name="age-group" value="<18">
+                      <span>&lt;18</span>
+                    </label>
+                    <label class="age-group">
+                      <input type="radio" name="age-group" value="18-25">
+                      <span>18-25</span>
+                    </label>
+                    <label class="age-group">
+                      <input type="radio" name="age-group" value="26-35">
+                      <span>26-35</span>
+                    </label>
+                    <label class="age-group">
+                      <input type="radio" name="age-group" value="36-50">
+                      <span>36-50</span>
+                    </label>
+                    <label class="age-group">
+                      <input type="radio" name="age-group" value="51+">
+                      <span>51+</span>
+                    </label>
+                  </div>
+                  <div class="note">
+                    <p id="message4" style="display: none;" class="note">Age can significantly influence jewellery style preferences, so this helps us make more suitable recommendations.</p>
+                   
+                  </div>
+                  <div class="age-group-container mt-3">
+                    <button type="button" onclick="handleClick5()" class="question">Do you have any religious considerations for this jewellery?</button> :
+                    <label class="religious">
+                      <input type="radio" name="religious" value="Christianity">
+                      <span>Christianity</span>
+                    </label>
+                    <label class="religious">
+                      <input type="radio" name="religious" value="Islam">
+                      <span>Islam</span>
+                    </label>
+                    <label class="religious">
+                      <input type="radio" name="religious" value="Hinduism">
+                      <span>Hinduism</span>
+                    </label>
+                    <label class="religious">
+                      <input type="radio" name="religious" value="None">
+                      <span>None</span>
+                    </label>
+                  </div>
+                  <div class="note">
+                    <p id="message5" style="display: none;" class="note">Some religious beliefs might influence jewellery design choices, like specific symbols or restrictions.</p>
+                   
+                  </div>
+                  <div class="jewelry-options mt-3">
+                    <button type="button" onclick="handleClick6()" class="question">What type of jewellery are you interested in?</button> :
+                    <label class="jewelry-option">
+                        <input type="radio" name="jewelry" value="Rings">
+                        <img src="https://img.icons8.com/?size=100&id=19657&format=png&color=000000" alt="Rings" height="20px">
+                        <span>Rings</span>
+                    </label>
+                    <label class="jewelry-option">
+                        <input type="radio" name="jewelry" value="Necklaces">
+                        <img src="./images/necklase.png" alt="Necklaces" height="30px">
+                        <span>Necklaces</span>
+                    </label>
+                    <label class="jewelry-option">
+                        <input type="radio" name="jewelry" value="Pendants">
+                        <img src="./images/pendant.png" alt="Pendants"  height="30px"><span>Pendants</span>
+                    </label>
+                    <label class="jewelry-option">
+                        <input type="radio" name="jewelry" value="Bracelets">
+                        <img src="./images/bracelet (2).png" alt="Bracelets" height="20px"><span>Bracelets</span>
+                    </label>
+                    <label class="jewelry-option">
+                        <input type="radio" name="jewelry" value="Earrings">
+                        <img src="images/earings.png" alt="Earrings" height="20px"><span>Earrings</span>
+                    </label>
+                </div>
+                  <div class="note">
+                    <p id="message6" style="display: none;" class="note">This helps us narrow down the product category to provide more relevant recommendations.</p>
+                   
+                  </div>
+                  <div class="age-group-container mt-3">
+                    <button type="button" onclick="handleClick7()" class="question">What is your budget for this jewellery?</button> :
+                    <label class="budget">
+                      <input type="radio" name="budget" value="<$50">
+                      <span><$50</span>
+                    </label>
+                    <label class="budget">
+                      <input type="radio" name="budget" value="$50-$100">
+                      <span>$50-$100</span>
+                    </label>
+                    <label class="budget">
+                      <input type="radio" name="budget" value="$100-$200">
+                      <span>$100-$200</span>
+                    </label>
+                    <label class="budget">
+                      <input type="radio" name="budget" value="$200+">
+                      <span>$200+</span>
+                    </label>
+                  </div>
+                  <div class="note">
+                    <p id="message7" style="display: none;" class="note"> Knowing your budget helps us suggest options that fit within your financial constraints.</p>
+                   
+                  </div>
+                  <div class="age-group-container mt-3">
+                    <button type="button" onclick="handleClick8()" class="question">What is your budget for this jewellery?</button> :
+                    <label>
+                        <input type="radio" name="image" id="" value="yes" onclick="toggleFileUpload()"> yes
+                    </label> 
+                    <label>
+                        <input type="radio" name="image" id="" value="no" onclick="toggleFileUpload()"> No
+                    </label> 
+                    <div id="file-upload-section" style="display: none;">
+                        <label for="file-upload">Upload an image of your outfit for better recommendations:</label>
+                        <input type="file" id="file-upload" name="file-upload" accept="image/*" onchange="previewImage(event)">
+                        <div id="image-preview" style="margin-top: 20px;">
+                            <img id="preview" src="#" alt="Image Preview" style="display: none; max-width: 100%; height: auto;">
+                        </div>
+                    </div>
+                    <div class="note">
+                        <p id="message8" style="display: none;" class="note"> Uploading an image of your outfit can help us recommend jewellery that complements your attire perfectly.</p>
+                       
+                      </div>
+            </form>
     </div>
     
     <script src="script.js"></script>
