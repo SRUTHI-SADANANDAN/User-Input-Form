@@ -22,5 +22,5 @@ Ensure you have the following installed on your machine:
    Download or clone the project files to your local machine.
 
    ```sh
-   git clone 
+   git clone https://github.com/SRUTHI-SADANANDAN/User-Input-Form.git
 
